@@ -1,4 +1,4 @@
-Moving Filter
+<h1>Sliding/Moving Filter<h1>
 
 <hr>
 
