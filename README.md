@@ -1,4 +1,4 @@
-<h1>Sliding/Moving Filter<h1>
+<h1>MATLAB: Sliding/Moving Filter<h1>
 
 <hr>
 
