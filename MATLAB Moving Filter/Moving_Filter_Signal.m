@@ -1,6 +1,10 @@
 
 function [Filtered_Signal] = Moving_Filter_Signal(Signal,t,Window_Size,Type)
 
+Figure = figure;
+set(Figure, 'MenuBar', 'none');
+set(Figure, 'ToolBar', 'none');
+
 clf;
 %Evaluating signal and window specific parameters%
 Sampling_Period = t(2) - t(1);
@@ -22,6 +26,9 @@ title("Original Signal");
 xlabel("Time (s)"); ylabel("Amplitude");
 xlim([min(t) max(t)+Window_Size_In_Time_Units/2]);
 ylim([1.2*min(Signal) 1.2*max(Signal)]);
+Axes = gca;
+Axes.GridColor = [0.5, 0.5, 0.5];
+grid on
 
 %Creating animated line to plot filtered signal (bottom subplot)%
 subplot(2,1,2); Animated_Plot = animatedline('Color','#0072BD','Marker','.','LineStyle','-');
@@ -29,6 +36,9 @@ title(Type + ": Filtered Signal");
 xlabel("Time (s)"); ylabel("Amplitude");
 xlim([min(t) max(t)+Window_Size_In_Time_Units/2]);
 ylim([1.2*min(Signal) 1.2*max(Signal)]);
+Axes = gca;
+Axes.GridColor = [0.5, 0.5, 0.5];
+grid on
 hold on
 
 

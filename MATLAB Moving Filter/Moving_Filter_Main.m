@@ -3,7 +3,7 @@
 Sampling_Frequency = 25;
 Sampling_Period = 1/Sampling_Frequency;
 
-Start_Time = 0; End_Time = 5;
+Start_Time = 0; End_Time = 10;
 t = (Start_Time:Sampling_Period:End_Time);
 f = 1;
 Signal = sin(2*pi*f*t);
